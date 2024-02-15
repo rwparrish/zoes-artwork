@@ -12,9 +12,8 @@ Python Models:
     - art
     - FormData
     
+    
 **Workflow:**
-
-Certainly! Here's the updated workflow with the styling step included:
 
 1. **Set Up Backend Environment**:
    - **Purpose**: Establish the foundation for the backend development.
