@@ -1,7 +1,7 @@
 from config import app
 from models.artwork import *
 from models.request import *
-# from routes.routes import *
+from routes.routes import *
 
 
 if (__name__ == "__main__"):
