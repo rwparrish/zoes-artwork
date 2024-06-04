@@ -7,9 +7,32 @@ from config import db, api
 class ArtworkResource(Resource):
     
     def get(self):
-        artworks = Artwork.query.all()
+        # date-time not serializable need to convert to string first
+        artworks = db.session.query(
+            Artwork.id,
+            Artwork.title,
+            Artwork.image,
+            Artwork.description,
+            # Artwork.creation_date
+        ).all()
         
-        return artworks, 200
+        # artworks = Artwork.query(
+        #     Artwork.id,
+        #     Artwork.title,
+        #     Artwork.image,
+        #     Artwork.description
+        # ).all()
+        
+        for artwork in artworks:
+            print(artwork.id)
+            print(artwork.title)
+            print(artwork.image)
+            print(artwork.description)
+
+            
+        json_artworks = [artwork._asdict() for artwork in artworks]
+            
+        return json_artworks, 200
     
     def post(self):
         artwork = Artwork(

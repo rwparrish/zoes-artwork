@@ -6,6 +6,7 @@ from flask_restful import Api
 from sqlalchemy import MetaData
 from dotenv import load_dotenv
 
+
 import os
 
 load_dotenv()
