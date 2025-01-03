@@ -4,7 +4,7 @@ from models.artwork import Artwork
 from config import db, api
 
 
-class ArtworkResource(Resource):
+class ArtworksResource(Resource):
     
     def get(self):
         # date-time not serializable need to convert to string first
@@ -45,4 +45,4 @@ class ArtworkResource(Resource):
         db.session.commit()
         return artwork.serialize(), 201
     
-api.add_resource(ArtworkResource, '/api/artworks')
+api.add_resource(ArtworksResource, '/api/artworks')

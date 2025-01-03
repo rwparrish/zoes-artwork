@@ -9,3 +9,5 @@ const Artwork = ({artwork}) => {
         </div>
     );
 }
+
+export default Artwork;
