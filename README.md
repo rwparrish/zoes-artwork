@@ -1,5 +1,9 @@
 Features:
     - filter art by "sold" or "available"
+      - create dropdown for users to select "available" or "sold"
+    - show all artwork
+     - on artworks page all pieces should be displayed as cards
+      - create ArtworkCard component 
     - secret URL with a secret parameter to reveal admin panel 
     - user form that emails business email when submitted - smtplib library for this???
 
