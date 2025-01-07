@@ -1,14 +1,15 @@
 import React from 'react';
 import {Link} from 'react-scroll'
-// import './Navbar.css';
+
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
+        <div className="flex flex-col items-center bg-white border-b border-darkest/10 drop-shadow-sm">
+            <nav className="flex flex-row w-full justify-between items-center max-w-screen-2xl">
             <div className="navbar-logo">
                 <Link to="/">Colorful Blobs</Link>
             </div>
-            <ul className="navbar-links">
+            <ul className="flex flex-row gap-8 items-center justify-between w-1/3 px-6 py-6">
                 <li>
                     <Link to="/home">Home</Link>
                 </li>
@@ -23,6 +24,8 @@ const Navbar = () => {
                 </li>
             </ul>
         </nav>
+        </div>
+        
     );
 };
 

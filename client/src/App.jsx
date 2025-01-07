@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Gallery from './components/Gallery'
 import ContactForm from './components/ContactForm'
-import './App.css'
+// import './App.css'
 
 function App() {
 
