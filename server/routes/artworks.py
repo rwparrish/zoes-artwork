@@ -13,24 +13,20 @@ class ArtworksResource(Resource):
             Artwork.title,
             Artwork.image,
             Artwork.description,
-            # Artwork.creation_date
+            Artwork.creation_date
         ).all()
-        
-        # artworks = Artwork.query(
-        #     Artwork.id,
-        #     Artwork.title,
-        #     Artwork.image,
-        #     Artwork.description
-        # ).all()
-        
-        for artwork in artworks:
-            print(artwork.id)
-            print(artwork.title)
-            print(artwork.image)
-            print(artwork.description)
-
+    
             
-        json_artworks = [artwork._asdict() for artwork in artworks]
+        json_artworks = [
+            {
+                'id': artwork.id,
+                'title': artwork.title,
+                'image': artwork.image,
+                'description': artwork.description,
+                'creation_date': artwork.creation_date.strftime('%B %d, %Y')
+            }
+            for artwork in artworks
+        ]
             
         return json_artworks, 200
     

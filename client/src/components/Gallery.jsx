@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Artwork from './Artwork';
+import ArtworkCard from './ArtworkCard';
 
 
 const Gallery = () => {
@@ -16,10 +16,11 @@ const Gallery = () => {
     
 
     const artworksToDisplay = artworks.map(artwork => 
-        { return <Artwork key={artwork.id} artwork={artwork}/> });
+        { return <ArtworkCard key={artwork.id} artwork={artwork}/> });
 
     return (
         <div className="gallery">
+            <h2>Gallery</h2>
             {artworksToDisplay}
         </div>
     );
