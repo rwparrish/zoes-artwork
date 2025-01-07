@@ -17,8 +17,8 @@ const Gallery = () => {
 
     return (
         <section className="flex flex-col justify-center items-center h-auto py-12">
-            <div className="flex flex-col max-w-screen-xl justify-center items-center gap-8">
-                <h2>Gallery</h2>
+            <h1 className="text-3xl py-12">Gallery</h1>
+            <div className="grid grid-cols-2 gap-4 max-w-screen-2xl">
                 {artworksToDisplay}
             </div>
         </section>

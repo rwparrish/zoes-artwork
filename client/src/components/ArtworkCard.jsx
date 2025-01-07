@@ -3,7 +3,7 @@ import React from 'react';
 const ArtworkCard = ({artwork}) => {
 
     return (
-        <div className="artwork">
+        <div className="flex flex-col justify-center items-center overflow-hidden">
             <img src={artwork.image} alt={artwork.title}/>
             <h3>{artwork.title}</h3>
             <p>{artwork.description}</p>
@@ -12,5 +12,6 @@ const ArtworkCard = ({artwork}) => {
         </div>
     );
 }
+
 
 export default ArtworkCard;
