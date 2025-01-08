@@ -1,77 +1,123 @@
-Features:
-    - filter art by "sold" or "available"
-      - create dropdown for users to select "available" or "sold"
-    - show all artwork
-     - on artworks page all pieces should be displayed as cards
-      - create ArtworkCard component 
-    - secret URL with a secret parameter to reveal admin panel 
-    - user form that emails business email when submitted - smtplib library for this???
+# Colorful Blobs
 
-Pages:
-    - About the artist
-    - Gallery list all art pieces
-    - Contact the artist (form)
+**Colorful Blobs** is a website I built for my daughter Zoë to showcase her artwork online, with the potential to sell her creations in the future. The platform features an About page to learn more about the artist, a Gallery section displaying her artwork, and a Contact section with a form to get in touch. Future enhancements include AI-generated artwork combinations and automated email notifications using `smtplib`.
 
-Python Models:
-    - art
-    - FormData
-    
-    
-**Workflow:**
+---
 
-1. **Set Up Backend Environment**:
-   - **Purpose**: Establish the foundation for the backend development.
-   - **Steps**:
-     - Install Flask and SQLAlchemy.
-     - Create a basic Flask application structure.
-     - Set up a virtual environment using `pipenv`.
+## Features
 
-2. **Define Database Models**:
-   - **Purpose**: Define the data structure for storing artwork information and form submissions.
-   - **Steps**:
-     - Create SQLAlchemy models for `Artwork` and `FormData`.
-     - Define relationships between models if needed (e.g., one-to-many).
+- **About Page**: Learn about Zoë and her artistic journey.
+- **Gallery Section**: View a curated selection of her artwork.
+- **Contact Section**: Fill out a form to get in touch with Zoë.
+- **Upcoming Features**:
+  - **AI Image Generation**: Users will be able to combine two artworks and generate a unique, blended image.
+  - **Automated Emailing**: Send automated emails using Python’s `smtplib`.
 
-3. **Implement Backend Routes**:
-   - **Purpose**: Set up the endpoints for handling HTTP requests and responses.
-   - **Steps**:
-     - Create routes for listing artwork, submitting forms, and sending emails.
-     - Implement request handlers for each route.
+---
 
-4. **Create Frontend Components**:
-   - **Purpose**: Develop the user interface components for displaying artwork and submitting forms.
-   - **Steps**:
-     - Set up React with Formik for form handling.
-     - Design and implement components for viewing artwork listings and submitting forms.
+## Tech Stack
 
-5. **Add Styling**:
-   - **Purpose**: Enhance the visual appearance and layout of the frontend components.
-   - **Steps**:
-     - Choose a styling approach (e.g., CSS, CSS frameworks like Bootstrap).
-     - Apply styles to the frontend components to improve aesthetics and user experience.
+### Client
 
-6. **Integrate Backend with Frontend**:
-   - **Purpose**: Connect the backend API endpoints with the frontend components.
-   - **Steps**:
-     - Make API requests from the frontend to fetch artwork data and submit form data.
-     - Handle responses from the backend and update the UI accordingly.
+- **Framework**: React
+- **Styling**: Tailwind CSS
+- **State Management**: Formik for form handling
+- **Routing**: React Scroll for smooth navigation
 
-7. **Implement Email Notification System**:
-   - **Purpose**: Set up automated email notifications for form submissions.
-   - **Steps**:
-     - Add functionality to send emails using Python's `smtplib` library.
-     - Trigger email notifications upon form submission.
+### Server
 
-8. **Refine and Test Features**:
-   - **Purpose**: Fine-tune existing features and conduct thorough testing.
-   - **Steps**:
-     - Conduct user testing to identify and address any usability issues.
-     - Refactor code for better organization and efficiency.
-     - Perform comprehensive testing to ensure functionality and reliability.
+- **Framework**: Flask (Python)
+- **Database**: PostgreSQL with Flask-SQLAlchemy
+- **API**: Flask-RESTful for building RESTful APIs
+- **Cross-Origin Support**: Flask-CORS
+- **Migrations**: Flask-Migrate
+- **Environment Management**: Python-dotenv
 
-9. **Deploy Application**:
-   - **Purpose**: Make the application accessible to users on the web.
-   - **Steps**:
-     - Choose a hosting provider (e.g., Heroku, AWS) and deploy the backend and frontend.
-     - Configure domain settings and SSL certificates if necessary.
+---
 
+## Installation
+
+Follow these steps to set up the project locally.
+
+### Clone the Repository
+
+```bash
+git clone [your-repository-url]
+```
+
+### Client Setup
+
+```bash
+# Navigate to client directory
+cd client
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Server Setup
+
+```bash
+# Navigate to server directory
+cd server
+
+# Create virtual environment
+pipenv install
+
+# Activate virtual environment
+pipenv shell
+
+# Install dependencies
+pipenv install
+
+# Set up environment variables
+cp .env.example .env
+```
+
+### Development
+
+```bash
+# Run client development server
+npm run dev
+
+# Run server
+python app.py
+```
+
+---
+
+## Contributing
+
+I welcome contributions to **Colorful Blobs**! Whether you have ideas for new features, found a bug, or want to enhance the existing code, here’s how you can get involved:
+
+1. **Fork the repository**  
+2. **Clone your fork**  
+   ```bash
+   git clone [your-fork-url]
+   ```
+3. **Create a new branch for your feature or bugfix**  
+   ```bash
+   git checkout -b feature-or-bug-name
+   ```
+4. **Make your changes and commit**  
+   Ensure your code follows the existing style and conventions.  
+   ```bash
+   git commit -m "Describe your changes"
+   ```
+5. **Push your branch**  
+   ```bash
+   git push origin feature-or-bug-name
+   ```
+6. **Open a pull request**  
+   Provide a clear description of your changes and link any relevant issues.
+
+I look forward to your contributions!
+
+---
+
+## License
+
+This project is licensed under the MIT License. 
