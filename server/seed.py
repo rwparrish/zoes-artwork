@@ -1,7 +1,7 @@
 from config import app, db
 from datetime import datetime
 from models.artwork import *
-from models.request import *
+from models.contact_request import *
 
 # I do not have any associations between the models
 # seed the bd with 5 pieces of artwork and 5 form data entries
@@ -21,11 +21,11 @@ with app.app_context():
 
     db.session.commit()
 
-    form_data1 = Request(name='John Doe', phone='555-555-5555', email="some email", message='This is a test message1')
-    form_data2 = Request(name='Jane Doe', phone='555-555-5555', email="some email", message='This is a test message2')
-    form_data3 = Request(name='John Smith', phone='555-555-5555', email="some email", message='This is a test message3')
-    form_data4 = Request(name='Jane Smith', phone='555-555-5555', email="some email", message='This is a test message4')
-    form_data5 = Request(name='John Johnson', phone='555-555-5555', email="some email", message='This is a test message5')
+    form_data1 = ContactRequest(name='John Doe', phone='555-555-5555', email="some email", message='This is a test message1')
+    form_data2 = ContactRequest(name='Jane Doe', phone='555-555-5555', email="some email", message='This is a test message2')
+    form_data3 = ContactRequest(name='John Smith', phone='555-555-5555', email="some email", message='This is a test message3')
+    form_data4 = ContactRequest(name='Jane Smith', phone='555-555-5555', email="some email", message='This is a test message4')
+    form_data5 = ContactRequest(name='John Johnson', phone='555-555-5555', email="some email", message='This is a test message5')
 
     db.session.add(form_data1)
     db.session.add(form_data2)

@@ -1,3 +1,3 @@
 from .artworks import *
-from .request import *
+from .contact_requests import *
 

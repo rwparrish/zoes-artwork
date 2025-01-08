@@ -1,6 +1,6 @@
 from config import app
 from models.artwork import *
-from models.request import *
+from models.contact_request import *
 from routes.routes import *
 
 
