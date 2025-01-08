@@ -21,11 +21,11 @@ with app.app_context():
 
     db.session.commit()
 
-    form_data1 = Request(name='John Doe', email="some email", message='This is a test message1')
-    form_data2 = Request(name='Jane Doe', email="some email", message='This is a test message2')
-    form_data3 = Request(name='John Smith', email="some email", message='This is a test message3')
-    form_data4 = Request(name='Jane Smith', email="some email", message='This is a test message4')
-    form_data5 = Request(name='John Johnson', email="some email", message='This is a test message5')
+    form_data1 = Request(name='John Doe', phone='555-555-5555', email="some email", message='This is a test message1')
+    form_data2 = Request(name='Jane Doe', phone='555-555-5555', email="some email", message='This is a test message2')
+    form_data3 = Request(name='John Smith', phone='555-555-5555', email="some email", message='This is a test message3')
+    form_data4 = Request(name='Jane Smith', phone='555-555-5555', email="some email", message='This is a test message4')
+    form_data5 = Request(name='John Johnson', phone='555-555-5555', email="some email", message='This is a test message5')
 
     db.session.add(form_data1)
     db.session.add(form_data2)
