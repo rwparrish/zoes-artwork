@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex flex-col items-center bg-white border-b border-darkest/10 drop-shadow-sm">
             <nav className="flex flex-row w-full justify-between items-center max-w-screen-2xl">
                 <div className="navbar-logo">
-                    <h1 className="text-2xl font-bold text-gray-800">Colorful Blobs</h1>
+                    <h1 className="text-2xl font-bold text-gray-800">Noodle Doodles</h1>
                 </div>
                 <ul className="flex flex-row gap-8 items-center justify-between w-1/3 px-6 py-6">
                     <li>
